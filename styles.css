@@ -1,0 +1,573 @@
+/* Estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+    font-style: italic; 
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* Adiciona transição suave para a mudança de cor */
+}
+
+header nav ul li a:hover {
+    color: #f8d8d8; /* Define a cor desejada ao passar o mouse */
+    text-decoration: none; /* Remove a linha sublinhada */
+}
+
+
+
+/* Ajuste para as seções */
+section {
+    height: 100vh;
+    overflow: auto;
+    margin: 0 auto; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos específicos para cada seção */
+
+/* Seção do portfólio */
+.portfolio {
+    position: relative;
+    text-align: center;
+    margin-top: 90px; /* Adiciona espaço para o header fixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 1100px;
+}
+
+.main-photo {
+    width: auto;
+    height: 600px;
+    border-radius: 10px;
+    position: relative; /* Mantém a posição relativa dentro do contêiner */
+    z-index: 1; /* Imagem abaixo do texto */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    pointer-events: none; /* Impede interação do mouse com o texto */
+}
+
+.text-overlay .principal {
+    font-size: 10em; /* Mesmo tamanho que os outros textos */
+    color: #fff; /* Mesma cor que os outros textos */
+    position: absolute;
+    top: 70px; /* Ajusta a posição para o topo */
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2; /* Garante que esteja acima da imagem */
+}
+
+.text-overlay h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 10em; 
+    color: #fff;
+    position: relative;
+    z-index: 0; /* Outros textos no fundo */
+}
+
+.description {
+    background-color: #f8d8d8;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 35%;
+    position: relative;
+    margin-left: 1000px; /* Ajusta a posição para a esquerda */
+}
+
+
+
+/* Seção sobre mim */
+.about {
+    background-color: #8e7887; /* Cor lilás */
+    color: #fff; /* Branco */
+    padding: 50px 0; /* Espaçamento para a seção */
+}
+
+.about h2 {
+    text-align: left; /* Alinha o título à esquerda */
+    font-size: 2em; /* Define o tamanho grande para o título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.title{
+    margin-right: 100px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no início do contêiner */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.about-content p {
+    text-align: center; /* Alinha o parágrafo à esquerda */
+    margin: 0 150px;
+    font-size: 25px;
+}
+
+
+.about-content img {
+    margin-right: 50px; 
+}
+
+
+.about-content > div {
+    flex: 2; /* O contêiner dos parágrafos ocupa duas partes do espaço disponível */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os parágrafos */
+}
+
+
+/* Seção minhas especialidades */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+
+.specialties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f7f7f7; /* Cor de fundo opcional */
+}
+
+.specialties h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Cor do texto do título */
+}
+
+.snip1577 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    width: 230px; /* Tamanho fixo para os cards */
+    height: 230px; /* Tamanho fixo para os cards */
+    color: #fff;
+    text-align: left;
+    background: #000;
+    transition: transform 0.4s ease;
+    border-radius: 8px; /* Borda arredondada opcional */
+}
+
+.snip1577 img {
+    width: 100%; /* Ajusta a largura da imagem para preencher o contêiner */
+    height: 100%; /* Ajusta a altura da imagem para preencher o contêiner */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner sem distorção */
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+.snip1577 figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo do caption */
+    width: 100%;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.snip1577 h3,
+.snip1577 h4 {
+    margin: 0;
+    color: #fff;
+}
+
+.snip1577 h4 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.snip1577:hover {
+    transform: scale(1.05);
+}
+
+.snip1577:hover img {
+    opacity: 0.2;
+}
+
+.snip1577:hover figcaption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+footer {
+    background: #000;
+    color: #f7d8da;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #8e7887;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+.carousel .list .item .des {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com opacidade */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados, se desejado */
+}
